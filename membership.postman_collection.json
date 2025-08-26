@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "8f014d2f-1351-4ab7-8db5-a60a458f43d2",
+		"name": "membership",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25481649"
+	},
+	"item": [
+		{
+			"name": "all plans",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/membership/plans",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommended tier",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/membership/users/3/recommended-tier",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"users",
+						"3",
+						"recommended-tier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriptions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : 5,\r\n    \"period\" : \"MONTHLY\",\r\n    \"tier\" : \"SILVER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/membership/subscribe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert orders stats for demo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/membership/uses/5/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"uses",
+						"5",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upgrade",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tier\" : \"GOLD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/membership/subscribe/1/upgrade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"subscribe",
+						"1",
+						"upgrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downgrade",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tier\" : \"GOLD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/membership/subscribe/1/downgrade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"subscribe",
+						"1",
+						"downgrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel subs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/membership/subscribe/1/cancel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"subscribe",
+						"1",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "active subs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/membership/users/5/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"membership",
+						"users",
+						"5",
+						"current"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
